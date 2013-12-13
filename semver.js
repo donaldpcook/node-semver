@@ -292,7 +292,7 @@ function SemVer(version, loose) {
 SemVer.prototype.format = function() {
   this.version = this.major + '.' + this.minor + '.' + this.patch;
   if (this.prerelease.length)
-    this.version += '-' + this.prerelease.join('.');
+    this.version += '.' + this.prerelease.join('.');
   return this.version;
 };
 
